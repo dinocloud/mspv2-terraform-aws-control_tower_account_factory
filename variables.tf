@@ -109,7 +109,7 @@ variable "maximum_concurrent_customizations" {
 variable "aft_vpc_endpoints" {
   type        = bool
   description = "Flag turning VPC endpoints on/off for AFT VPC"
-  default     = true
+  default     = false
   validation {
     condition     = contains([true, false], var.aft_vpc_endpoints)
     error_message = "Valid values for var: aft_vpc_endpoints are (true, false)."
